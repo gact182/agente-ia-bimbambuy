@@ -50,7 +50,7 @@ if not api_key_check:
 elif retriever is None:
     st.warning(f"⚠️ No se pudieron leer los PDFs en la carpeta 'data'.")
 else:
-    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.2, google_api_key=api_key_check)
+    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash",temperature=0.2,google_api_key=api_key_check)
     
 
 
@@ -58,18 +58,34 @@ else:
 
     query = st.text_input("¿Qué deseas consultar sobre las políticas de BimBam Buy?")
 
-    if query:
-        with st.spinner("Analizando la documentación interna..."):
+
+
+if query:
+    with st.spinner("Analizando la documentación interna..."):
+        try:
             relevant_docs = retriever.invoke(query)
-            context = "\n\n".join([doc.page_content for doc in relevant_docs])
-            
-            prompt = f"""Responde a la siguiente pregunta basándote únicamente en el contexto provisto:
-            
-            Contexto:
-            {context}
-            
-            Pregunta: {query}"""
-            
+            context = "\n\n".join(
+                doc.page_content for doc in relevant_docs
+            )
+
+            prompt = f"""
+Responde a la siguiente pregunta basándote únicamente en el contexto provisto.
+Si la respuesta no se encuentra en el contexto, indícalo claramente.
+
+Contexto:
+{context}
+
+Pregunta:
+{query}
+"""
+
             response = llm.invoke(prompt)
+
             st.markdown("### Respuesta:")
-            st.write(response.content)
+            st.write(response.text)
+
+        except Exception as error:
+            st.error(
+                "No fue posible consultar el modelo de IA en este momento. "
+                "Verifica la configuración de la API o inténtalo nuevamente."
+            )
