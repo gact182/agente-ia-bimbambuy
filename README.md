@@ -15,6 +15,13 @@ El proyecto utiliza un flujo de recuperación de información aumentada (**RAG**
 
 ---
 
+## 💬 Ejemplos de Preguntas y Respuestas
+
+* **Pregunta:** ¿Cuál es la política de devoluciones?
+* **Respuesta generada por el agente:** Según el manual interno de BimBam Buy, cuentas con hasta 30 días calendario a partir de la fecha de entrega para solicitar una devolución, siempre y cuando el producto se encuentre en su empaque original y sin uso.
+  
+---
+
 ## 📂 Estructura del Proyecto
 ```text
 agente-ia-bimbambuy/
@@ -31,7 +38,4 @@ agente-ia-bimbambuy/
     └── Programa de Afili...pdf
 
 ---
-## 💬 Ejemplos de Preguntas y Respuestas
 
-* **Pregunta:** ¿Cuál es la política de devoluciones?
-* **Respuesta generada por el agente:** Según el manual interno de BimBam Buy, cuentas con hasta 30 días calendario a partir de la fecha de entrega para solicitar una devolución, siempre y cuando el producto se encuentre en su empaque original y sin uso.
