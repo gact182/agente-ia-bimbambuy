@@ -14,6 +14,45 @@ El proyecto utiliza un flujo de recuperación de información aumentada (**RAG**
 * **Modelos de IA:** Google GenAI (Gemini) para la generación de respuestas contextuales.
 
 ---
+## 🚀 Instalación y ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/gact182/agente-ia-bimbambuy.git
+cd agente-ia-bimbambuy
+
+### 2. Instalar las dependencias
+</> Bash
+pip install -r requirements.txt
+
+### 3. Configurar la API key 
+Crea un archivo llamado .env en la raíz del proyecto:
+</> env
+GEMINI_API_KEY=tu_api_key_de_google
+
+La API key puede generarse desde Google AI Studio.
+El archivo .env está excluido del repositorio por seguridad.
+
+### 4. Ejecutar la aplicación
+</> Bash
+streamlit run app.py
+
+La aplicación estará disponible normalmente en:
+http://localhost:8501
+
+También actualizaría la sección tecnológica:
+
+```markdown
+* **Modelo generativo:** Google Gemini 3.5 Flash
+* **Embeddings:** Hugging Face `all-MiniLM-L6-v2`
+
+Después: 
+git add README.md
+git commit -m "Actualizar instrucciones de ejecución"
+git push origin main
+
+---
 
 ## 💬 Ejemplos de Preguntas y Respuestas
 
