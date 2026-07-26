@@ -21,36 +21,37 @@ El proyecto utiliza un flujo de recuperación de información aumentada (**RAG**
 ```bash
 git clone https://github.com/gact182/agente-ia-bimbambuy.git
 cd agente-ia-bimbambuy
+```
 
 ### 2. Instalar las dependencias
-</> Bash
-pip install -r requirements.txt
 
-### 3. Configurar la API key 
-Crea un archivo llamado .env en la raíz del proyecto:
-</> env
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configurar la API key
+
+Crea un archivo llamado `.env` en la raíz del proyecto:
+
+```env
 GEMINI_API_KEY=tu_api_key_de_google
+```
 
 La API key puede generarse desde Google AI Studio.
-El archivo .env está excluido del repositorio por seguridad.
+
+> El archivo `.env` está excluido del repositorio por seguridad. Cada usuario debe configurar su propia API key.
 
 ### 4. Ejecutar la aplicación
-</> Bash
+
+```bash
 streamlit run app.py
+```
 
 La aplicación estará disponible normalmente en:
+
+```text
 http://localhost:8501
-
-También actualizaría la sección tecnológica:
-
-```markdown
-* **Modelo generativo:** Google Gemini 3.5 Flash
-* **Embeddings:** Hugging Face `all-MiniLM-L6-v2`
-
-Después: 
-git add README.md
-git commit -m "Actualizar instrucciones de ejecución"
-git push origin main
+```
 
 ---
 
