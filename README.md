@@ -8,7 +8,7 @@ Aplicación web interactiva desarrollada con **Streamlit**, **LangChain** y **Go
 
 La siguiente captura muestra el agente consultando los manuales internos y generando una respuesta basada en la documentación disponible.
 
-![Vista del agente de IA BimBam Buy](Docs/demo-agente-bimbambuy.png)
+![Vista del agente de IA BimBam Buy](docs/demo-agente-bimbambuy.png)
 
 ---
 
