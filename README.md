@@ -4,6 +4,14 @@ Aplicación web interactiva desarrollada con **Streamlit**, **LangChain** y **Go
 
 ---
 
+## 🖥️ Vista de la aplicación
+
+La siguiente captura muestra el agente consultando los manuales internos y generando una respuesta basada en la documentación disponible.
+
+![Vista del agente de IA BimBam Buy](Docs/demo-agente-bimbambuy.png)
+
+---
+
 ## 🛠️ Arquitectura y Tecnologías
 El proyecto utiliza un flujo de recuperación de información aumentada (**RAG** - *Retrieval-Augmented Generation*):
 * **Interfaz de Usuario:** Streamlit
